@@ -5,6 +5,7 @@ let texpense = 0;
 const transactions = [];
 d = new Date();
 const month = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'];
+//Add Transactions
 function addTransaction(){
     let desc = document.getElementById('desc').value;
     let amount = parseFloat(document.getElementById('amount').value);
@@ -25,6 +26,7 @@ function addTransaction(){
     desc = document.getElementById('desc').value = "";
     amount = document.getElementById('amount').value = "";
 }
+//Update Balance
  function updateBalance(transaction){
         if(transaction.type == "income"){
             balance += transaction.amount;
@@ -38,6 +40,7 @@ function addTransaction(){
         }
         document.getElementById('balance').innerHTML = balance;
     } 
+//Display Transaction
 function displayTransaction(transaction){
             let table = document.getElementById('tabledata');
             let row = table.insertRow(-1);
