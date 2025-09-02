@@ -31,14 +31,14 @@ function addTransaction(){
         if(transaction.type == "income"){
             balance += transaction.amount;
             tincome += transaction.amount;
-            document.getElementById('tincome').innerHTML=tincome;
+            document.getElementById('tincome').innerHTML=tincome.toFixed(2);
         }
         else{
             balance -= transaction.amount;
             texpense += transaction.amount;
-            document.getElementById('texpense').innerHTML = texpense;
+            document.getElementById('texpense').innerHTML = texpense.toFixed(2);
         }
-        document.getElementById('balance').innerHTML = balance;
+        document.getElementById('balance').innerHTML = balance.toFixed(2);
     } 
 //Display Transaction
 function displayTransaction(transaction){
